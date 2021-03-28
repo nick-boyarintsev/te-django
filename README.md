@@ -5,7 +5,7 @@
 Open the terminal and run the following commands:
 
 ```bash
-git clone git@github.com:nick-boyarintsev/te-django.git te-django
+git clone https://github.com/nick-boyarintsev/te-django.git te-django
 cd te-django
 ```
 

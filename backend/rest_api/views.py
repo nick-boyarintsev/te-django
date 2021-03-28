@@ -239,7 +239,7 @@ def post_registrations(request):
                 break
         logger.info('The new user is registered with ID: ' + new_uuid)
         cache.set(new_uuid, data, None)
-        response = JsonResponse(status=201, data={})
+        response = JsonResponse(status=201, data={'registrationId': new_uuid})
         response['x-correlationid'] = request.META['x-correlationid']
         return response
     except Exception as e:
