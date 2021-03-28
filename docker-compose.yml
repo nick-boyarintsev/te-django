@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: ./docker/backend/Dockerfile
+    container_name: te-django-backend
+    depends_on:
+      - memcached
+    environment:
+      - SECRET_KEY
+      - DEBUG
+      - ALLOWED_HOSTS
+      - DJANGO_TIME_ZONE
+    image: te-django/backend
+    ports:
+      - 8000:8000
+    restart: unless-stopped
+    volumes:
+      - ./backend:/var/www/backend
+
+  memcached:
+    container_name: te-django-memcached
+    entrypoint:
+      - memcached
+      - -m 64
+    image: memcached
+    ports:
+      - 11211:11211
+    restart: unless-stopped

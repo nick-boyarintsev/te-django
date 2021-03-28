@@ -1,0 +1,32 @@
+# Ignore git files
+.git*
+
+# Ignore docker files
+docker*
+
+# Ignore logs
+docker/*/logs
+
+# Ignore code editors files
+.vscode
+.idea
+.save
+
+# Ignore python cached and built files
+__pycache__
+build
+dist
+develop-eggs
+eggs
+.eggs
+*.egg
+*.egg-info
+*.py[cod]
+*$py.class
+
+# Ignore python environment
+env
+venv
+
+# Ignore dotenv
+.env

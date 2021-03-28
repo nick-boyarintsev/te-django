@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  backend:
+    environment:
+      - SECRET_KEY=secret
+      - DEBUG=1
+      - ALLOWED_HOSTS=localhost 127.0.0.1 0.0.0.0
+      - DJANGO_TIME_ZONE=UTC
